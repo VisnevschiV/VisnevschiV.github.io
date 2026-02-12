@@ -165,6 +165,7 @@ body {
     position: relative;
     overflow: hidden;
     animation: floatIn 0.9s ease both;
+    margin-top: 13vh;
 }
 
 .card::before,
