@@ -1,63 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romantik Video</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            position: relative;
-        }
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .play-button {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100px;
-            height: 100px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            font-size: 18px;
-            color: black;
-            cursor: pointer;
-        }
-    </style>
+    <title>Vlad + Iulia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <video id="romantikVideo" loop playsinline>
-        <source src="romanik.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    
-    <div id="playButton" class="play-button">
-        Play
+    <div class="floating-gallery" aria-hidden="true">
+        <img src="047da827-55f9-4a40-a174-9087781e6f69.jpg" alt="">
+        <img src="286fcf83-bdbe-4d9e-a650-89b7ba0ace7c.jpg" alt="">
+        <img src="2f70077a-fe47-40cd-b3a1-48d538fc351d.jpg" alt="">
+        <img src="4280e2ac-ccb5-4d84-8d91-3a3e4262bffa.jpg" alt="">
+        <img src="4ad7ea09-643d-40d5-b873-f699362010cb.jpg" alt="">
+        <img src="5514ab74-3f15-4fc9-b5c6-1ed5451f2d75.jpg" alt="">
+        <img src="7faa6297-6641-4e08-8aab-1397155fa7cd.jpg" alt="">
+        <img src="a6d1a26d-2859-4f2e-92d5-0fce68e3936c.jpg" alt="">
+        <img src="c91563fa-d327-4672-8fb1-a799fb730158.jpg" alt="">
+        <img src="d6d2f4fd-0779-4087-9d47-d1b5c131cc48.jpg" alt="">
+        <img src="ec3b3e37-14ca-4905-8db8-f58d922c3074.jpg" alt="">
     </div>
+    <main class="scene">
+        <section class="card">
+            <div class="content">
+                <div class="eyebrow">February 12, 2026</div>
+                <h1>Iulia, will you be my Valentine?</h1>
+                <p class="subtext">
+                    From the day we met, you made every small moment feel like a celebration.
+                    This year I want one clear answer to a simple question.
+                </p>
 
-    <script>
-        const video = document.getElementById('romantikVideo');
-        const playButton = document.getElementById('playButton');
+                <div class="button-row" id="buttonRow">
+                    <button class="yes" id="yesBtn">Yes, of course</button>
+                    <button class="no" id="noBtn">No</button>
+                </div>
 
-        // Show play button initially
-        playButton.style.display = 'flex';
+                <div class="response" id="response"></div>
+                <div class="signature">Love, Vlad</div>
+            </div>
+        </section>
 
-        // When play button is clicked
-        playButton.addEventListener('click', () => {
-            video.play();
-            video.muted = false;  // Enable audio when playing
-            playButton.style.display = 'none'; // Hide play button
-        });
-    </script>
+        <section class="gallery">
+            <h2 class="gallery-title">Our favorite moments</h2>
+            <div class="gallery-grid">
+                <img src="047da827-55f9-4a40-a174-9087781e6f69.jpg" alt="Vlad and Iulia by the ocean">
+                <img src="286fcf83-bdbe-4d9e-a650-89b7ba0ace7c.jpg" alt="Beach day together">
+                <img src="2f70077a-fe47-40cd-b3a1-48d538fc351d.jpg" alt="Iulia by the pool and palms">
+                <img src="4280e2ac-ccb5-4d84-8d91-3a3e4262bffa.jpg" alt="Sunset portrait">
+                <img src="4ad7ea09-643d-40d5-b873-f699362010cb.jpg" alt="Kiss in scuba gear">
+                <img src="5514ab74-3f15-4fc9-b5c6-1ed5451f2d75.jpg" alt="Cozy room view of the sea">
+                <img src="7faa6297-6641-4e08-8aab-1397155fa7cd.jpg" alt="Smiling pool selfie">
+                <img src="a6d1a26d-2859-4f2e-92d5-0fce68e3936c.jpg" alt="Sunset couple selfie">
+                <img src="c91563fa-d327-4672-8fb1-a799fb730158.jpg" alt="Scuba day on the beach">
+                <img src="d6d2f4fd-0779-4087-9d47-d1b5c131cc48.jpg" alt="Beach details and camera">
+                <img src="ec3b3e37-14ca-4905-8db8-f58d922c3074.jpg" alt="Beach walk with a hat">
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
